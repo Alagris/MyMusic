@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alagris.DatabaseManagerController">
+   <center>
+      <SplitPane dividerPositions="0.5">
+         <items>
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefViewportHeight="558.0" prefViewportWidth="295.0">
+               <content>
+                  <ListView fx:id="leftList" BorderPane.alignment="CENTER" />
+               </content>
+            </ScrollPane>
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefViewportHeight="558.0" prefViewportWidth="295.0">
+               <content>
+                  <ListView fx:id="rightList" />
+               </content>
+            </ScrollPane>
+         </items>
+      </SplitPane>
+   </center>
+   <bottom>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+            <Label contentDisplay="RIGHT" text="Filter">
+               <graphic>
+                  <TextField />
+               </graphic>
+            </Label>
+          <Button fx:id="clearLeft" mnemonicParsing="false" text="Clear left" />
+            <Button fx:id="moveAllToLeft" mnemonicParsing="false" text="Move all" />
+        </items>
+      </ToolBar>
+   </bottom>
+</BorderPane>
